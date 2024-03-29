@@ -149,10 +149,13 @@ void * popFront(List * list) {
     if (list->head == NULL) {
         list->tail = NULL;
       
+    } else {
+        list->head->prev = NULL;
+      
     }
-  
     list->current = list->head;
-    return popCurrent(list);
+    return aux->data;
+    
 }
 
 void * popBack(List * list) {
