@@ -181,11 +181,12 @@ void * popBack(List * list) {
         list->tail->next = NULL;
       
     }
-  
-  
-  
     list->current = list->tail;
-    return popCurrent(list);
+    return aux->data;
+  
+  
+  
+    
 }
 
 void * popCurrent(List * list) {
